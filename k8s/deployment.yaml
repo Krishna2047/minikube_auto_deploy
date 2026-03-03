@@ -18,3 +18,15 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
+          env:
+            - name: APP_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: app-credentials
+                  key: USERNAME
+
+            - name: APP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-credentials
+                  key: PASSWORD
