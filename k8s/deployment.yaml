@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: YOUR_DOCKER_USERNAME/cicd-app:latest
+          image: krishna20047/cicd-app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
